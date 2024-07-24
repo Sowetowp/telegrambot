@@ -592,6 +592,10 @@ video {
   margin: auto;
 }
 
+.h-\[70\%\] {
+  height: 70%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
