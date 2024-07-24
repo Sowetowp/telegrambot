@@ -52,6 +52,8 @@ app.post("/", async (req, res) => {
     }
 })
 
+app.get("/")
+
 app.listen(5000, async () => {
     console.log('App running on port 5000');
     await init();
