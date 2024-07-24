@@ -64,7 +64,7 @@
         form.addEventListener("submit", (e) => {
             e.preventDefault()
             let xhr = new XMLHttpRequest()
-            xhr.open("POST", "/")
+            xhr.open("POST", `/webhook/${TOKEN}`)
             xhr.setRequestHeader("content-type", "application/json")
 
             xhr.send(JSON.stringify({message: message.value}))
