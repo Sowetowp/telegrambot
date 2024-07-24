@@ -84,8 +84,21 @@
     <script>
         async function fetchChatData() {
             try {
-                const response = await fetch('/chat.json');
-                const chatData = await response.json();
+                let xhr = new XMLHttpRequest()
+            xhr.open("POST", "/")
+            xhr.setRequestHeader("content-type", "application/json")
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        const response = JSON.parse(xhr.responseText);
+                        console.log(response);
+                    } else {
+                        console.error('Error sending message:', xhr.status, xhr.statusText);
+                    }
+                }
+            };
+
                 console.log(chatData);
             } catch (error) {
                 console.error('Error fetching chat data:', error);
