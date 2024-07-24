@@ -608,6 +608,10 @@ video {
   max-width: 80rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .bg-cyan-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(165 243 252 / var(--tw-bg-opacity));
