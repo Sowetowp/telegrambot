@@ -44,7 +44,7 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
 app.post("/", async (req, res) => {
     try {
         await axios.post(`${TELEGRAM_API}/sendMessage`, {
-            text: text
+            text: req.body.message
         })
         res.send({});
     } catch (error) {
