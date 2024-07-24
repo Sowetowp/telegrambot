@@ -8,4 +8,5 @@ const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
 const URI = `webhook/${TOKEN}`
 const WEBHOOK_URL = SERVER_URL+URI
 
-const
+const app = express()
+app.use(bodyParser.json)
