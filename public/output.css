@@ -576,6 +576,11 @@ video {
   background-color: rgb(165 243 252 / var(--tw-bg-opacity));
 }
 
+.bg-cyan-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(103 232 249 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 1024px) {
   .lg\:w-1\/3 {
     width: 33.333333%;
