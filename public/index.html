@@ -107,7 +107,10 @@
         }
         fetchChatData()
         setInterval(fetchChatData, 1000);
-        
+        const scroll = ()=>{
+            dischat.scrollTop = dischat.scrollHeight;
+        }
+        scroll()
     </script>
     <script>
         const form = document.getElementById("form")
