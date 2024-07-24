@@ -79,7 +79,6 @@
                     localStorage.setItem("chat", JSON.stringify(data));
                     let existingChat = localStorage.getItem("chat");
                     let chatArrayParsed = JSON.parse(existingChat);
-                    console.log(chatArrayParsed);
                     dischat.innerHTML = ``
                     chatArrayParsed.forEach(element => {
                         const created = document.createElement("div")
