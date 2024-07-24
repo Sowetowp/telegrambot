@@ -129,7 +129,12 @@
             
             xhr.send(JSON.stringify({ message: message.value }))
             cr = document.createElement("div")
-            dischat.appendChild(created)
+            cr.innerHTML = `
+            <div class="bg-[rgba(190,243,243,0.105)] max-w-[90%] w-fit px-3 py-2 rounded-lg">
+                    hello
+                </div>
+            `
+            dischat.appendChild(cr)
             message.value = ""
         })
     </script>
