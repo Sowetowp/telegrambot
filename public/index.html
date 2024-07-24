@@ -67,6 +67,19 @@
             xhr.open("POST", "/")
             xhr.setRequestHeader("content-type", "application/json")
 
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Handle the response here
+                        const response = JSON.parse(xhr.responseText);
+                        console.log(response);
+                        updateChatContainer(response);
+                    } else {
+                        console.error('Error sending message:', xhr.status, xhr.statusText);
+                    }
+                }
+            };
+            
             xhr.send(JSON.stringify({ message: message.value }))
         })
     </script>
