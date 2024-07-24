@@ -93,9 +93,11 @@
 
                 if (response.ok) {
                     let data = await response.json();
-                    const chatt = localStorage.getItem("chat")
-                    const dis = localStorage.setItem("chat", [chatt || [], data].flat())
-                    console.log(dis)
+                    let existingChat = localStorage.getItem("chat");
+                    existingChat = existingChat ? JSON.parse(existingChat) : [];
+                    const updatedChat = existingChat.concat(data);
+                    localStorage.setItem("chat", JSON.stringify(updatedChat));
+                    console.log(updatedChat);
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
                 }
@@ -103,6 +105,7 @@
                 console.error('Error fetching chat data:', error);
             }
         }
+
         setInterval(fetchChatData, 3000);
     </script>
 </body>
