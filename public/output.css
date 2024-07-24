@@ -622,71 +622,8 @@ video {
   padding: 3rem;
 }
 
-/* Base styles */
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f3f4f6;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0;
-  /* Remove default margin */
-}
-
-.container {
-  width: 80%;
-  /* Adjust as needed */
-  max-width: 600px;
-  /* Adjust as needed */
-  overflow: hidden;
-  /* Hide overflowed content */
-  position: relative;
-  background-color: white;
-  padding: 1em;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.typewriter {
-  display: inline;
-  white-space: pre-wrap;
-  /* Allow text to wrap */
-  overflow: hidden;
-  /* Hide overflowed content */
-  border-right: 0.15em solid #000;
-  /* The cursor */
-  animation: typing 4s steps(60, end) 1s 1 normal both, blink-caret 0.75s step-end infinite;
-}
-
-/* Typing animation */
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-/* Blinking cursor animation */
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: black;
-  }
-}
-
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
   }
 }
-  
