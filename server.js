@@ -68,7 +68,6 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
             res.send({});
         });
     });
-    res.send({});
 });
 
 app.post("/", async (req, res) => {
