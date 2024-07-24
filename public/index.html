@@ -102,7 +102,7 @@
                     console.log(data)
                     localStorage.setItem("chat", data);
                     let existingChat = localStorage.getItem("chat");
-                    console.log(existingChat)
+                    console.log(json.parse(existingChat))
                     // dischat.innerHTML = ``
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
