@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .messageBox {
-    width: fit-content;
+    width: 100%;
     height: 40px;
     display: flex;
     align-items: center;
