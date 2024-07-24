@@ -94,7 +94,7 @@
                 if (response.ok) {
                     let data = await response.json();
                     const chatt = localStorage.getItem("chat")
-                    localStorage.setItem("chat", chatt)
+                    localStorage.setItem("chat", [chatt, data])
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
                 }
