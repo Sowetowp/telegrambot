@@ -67,7 +67,7 @@
             xhr.open("POST", "/")
             xhr.setRequestHeader("content-type", "application/json")
 
-            xhr.send(JSON.stringify(message.value))
+            xhr.send(JSON.stringify({message.value}))
         })
     </script>
 </body>
