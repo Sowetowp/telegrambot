@@ -93,9 +93,6 @@
     
                 if (response.ok) {
                     let data = await response.json();
-                    let existingChat = localStorage.getItem("chat");
-                    existingChat = existingChat ? existingChat : [];
-                    const updatedChat = existingChat.concat(data);
                     localStorage.setItem("chat", []);
                     console.log(updatedChat);
                 } else {
