@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .h-12 {
   height: 3rem;
 }
