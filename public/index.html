@@ -101,7 +101,7 @@
                     let data = await response.json();
                     localStorage.setItem("chat", data);
                     let existingChat = localStorage.getItem("chat");
-                    e
+                    console.log(existingChat)
                     // dischat.innerHTML = ``
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
