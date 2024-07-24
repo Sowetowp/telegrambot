@@ -570,6 +570,10 @@ video {
   margin-left: auto;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .h-\[40vh\] {
   height: 40vh;
 }
