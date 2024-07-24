@@ -31,11 +31,11 @@ const init = async () => {
         }
     }
 };
-
+const chat = []
 app.post(`/webhook/${TOKEN}`, async (req, res) => {
     console.log(req.body);
     const text = req.body.message.text
-    
+    chat.push({sent: text})
 });
 
 app.post("/", async (req, res) => {
