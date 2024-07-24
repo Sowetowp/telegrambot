@@ -9,4 +9,4 @@ const URI = `webhook/${TOKEN}`
 const WEBHOOK_URL = SERVER_URL+URI
 
 const app = express()
-app.use(bodyParser.json)
+app.use(bodyParser.json())
