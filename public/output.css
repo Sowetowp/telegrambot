@@ -679,6 +679,10 @@ video {
   fill: #67e8f9;
 }
 
+.fill-cyan-200 {
+  fill: #a5f3fc;
+}
+
 .p-12 {
   padding: 3rem;
 }
