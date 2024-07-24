@@ -41,6 +41,19 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
     res.send({});
 });
 
+app.post("/", async (req, res) => {
+    try {
+        
+        await axios.post(`${TELEGRAM_API}/sendMessage`, {
+            text: req.body.message
+        })
+        res.send({});
+    } catch (error) {
+        console.log(error)
+        res.send("error")
+    }
+})
+
 app.listen(5000, async () => {
     console.log('App running on port 5000');
     await init();
