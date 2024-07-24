@@ -100,7 +100,7 @@
                 if (response.ok) {
                     let data = await response.json();
                     console.log(data)
-                    localStorage.setItem("chat", data);
+                    localStorage.setItem("chat", JSON.parse(data));
                     let existingChat = localStorage.getItem("chat");
                     console.log(JSON.parse(existingChat))
                     // dischat.innerHTML = ``
