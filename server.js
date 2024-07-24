@@ -23,13 +23,14 @@ const init = async () => {
     }
 };
 
-app.post(`/webhook/${TOKEN}`, (req, res) => {
+app.post(`/webhook/${TOKEN}`, async(req, res) => {
     console.log(req.body);
 
     const chatId = req.body.message.chat.id
     const tect = req.body.message.text
     await axios.post(`${TELEGRAM_API}/sendMessage`, {
-        
+        chat_id: chatId
+        text: bodyParser.text
     })
     res.send({});
 });
