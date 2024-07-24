@@ -44,7 +44,7 @@ app.post("/", async (req, res) => {
             chat_id: CHAT_ID,
             text: req.body.message
         })
-        
+        rmSync.send()
     } catch (error) {
         console.log(error)
     }
