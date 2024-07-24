@@ -73,13 +73,12 @@
                         // Handle the response here
                         const response = JSON.parse(xhr.responseText);
                         console.log(response);
-                        updateChatContainer(response);
                     } else {
                         console.error('Error sending message:', xhr.status, xhr.statusText);
                     }
                 }
             };
-            
+
             xhr.send(JSON.stringify({ message: message.value }))
         })
     </script>
