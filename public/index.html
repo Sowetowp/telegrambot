@@ -64,6 +64,51 @@
         typeWriter()
     </script>
     <script>
+        async function fetchChatData() {
+            const dischat = document.getElementById("dischat")
+            try {
+                let response = await fetch("/chat", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    let data = await response.json();
+                    localStorage.setItem("chat", JSON.stringify(data));
+                    let existingChat = localStorage.getItem("chat");
+                    let chatArrayParsed = JSON.parse(existingChat);
+                    console.log(chatArrayParsed);
+                    dischat.innerHTML = ``
+                    chatArrayParsed.forEach(element => {
+                        const created = document.createElement("div")
+                        if (element.received) {
+                            created.innerHTML = `
+                            <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
+                                ${element.received}
+                                </div>
+                                `
+                        } else {
+                            created.innerHTML = `
+                                <div class="bg-[rgba(190,243,243,0.105)] max-w-[90%] w-fit px-3 py-2 rounded-lg">
+                                    ${element.sent}
+                                    </div>
+                                    `
+                        }
+                        dischat.appendChild(created)
+                    });
+                } else {
+                    console.error('Error sending message:', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('Error fetching chat data:', error);
+            }
+        }
+
+        setInterval(fetchChatData, 3000);
+    </script>
+    <script>
         const form = document.getElementById("form")
         const message = document.getElementById("messageInput")
         form.addEventListener("submit", (e) => {
@@ -86,51 +131,6 @@
             xhr.send(JSON.stringify({ message: message.value }))
             message.value = ""
         })
-    </script>
-    <script>
-        async function fetchChatData() {
-            const dischat = document.getElementById("dischat")
-            try {
-                let response = await fetch("/chat", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-                
-                if (response.ok) {
-                    let data = await response.json();
-                    localStorage.setItem("chat", JSON.stringify(data));
-                    let existingChat = localStorage.getItem("chat");
-                    let chatArrayParsed = JSON.parse(existingChat);
-                    console.log(chatArrayParsed);
-                    dischat.innerHTML = ``
-                    chatArrayParsed.forEach(element => {
-                        const created = document.createElement("div")
-                        if(element.received){
-                            created.innerHTML = `
-                            <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
-                                ${element.received}
-                                </div>
-                                `
-                            }else{
-                                created.innerHTML = `
-                                <div class="bg-[rgba(190,243,243,0.105)] max-w-[90%] w-fit px-3 py-2 rounded-lg">
-                                    ${element.sent}
-                                    </div>
-                                    `
-                                }
-                        dischat.appendChild(created)
-                    });
-                } else {
-                    console.error('Error sending message:', response.status, response.statusText);
-                }
-            } catch (error) {
-                console.error('Error fetching chat data:', error);
-            }
-        }
-
-        setInterval(fetchChatData, 3000);
     </script>
 </body>
 
