@@ -643,6 +643,10 @@ video {
   background-color: ;
 }
 
+.bg-\[rgba\(190\2c 243\2c 243\2c 0\.105\)\] {
+  background-color: rgba(190,243,243,0.105);
+}
+
 .p-3 {
   padding: 0.75rem;
 }
