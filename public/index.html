@@ -106,7 +106,7 @@
         }
         fetchChatData()
         setInterval(fetchChatData, 1000);
-        const scroll = ()=>{
+        const scroll = async()=>{
             const dischat = document.getElementById("dischat")
             dischat.scrollTop = dischat.scrollHeight;
         }
