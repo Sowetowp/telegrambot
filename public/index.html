@@ -96,7 +96,7 @@
                     let existingChat = localStorage.getItem("chat");
                     existingChat = existingChat ? existingChat : [];
                     const updatedChat = existingChat.concat(data);
-                    localStorage.setItem("chat", JSON.stringify(updatedChat));
+                    localStorage.setItem("chat", updatedChat);
                     console.log(updatedChat);
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
