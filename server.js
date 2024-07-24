@@ -27,7 +27,7 @@ app.post(`/webhook/${TOKEN}`, (req, res) => {
     console.log(req.body);
 
     const chatId = req.body.message.chat.id
-    const chatId = req.body.message.chat.id
+    const tect = req.body.message.text
     res.send({});
 });
 
