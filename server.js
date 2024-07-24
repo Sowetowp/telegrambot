@@ -46,14 +46,13 @@ app.post("/", async (req, res) => {
             text: req.body.message
         })
         chat.push({received: req.body.message})
-        res.send(chat)
     } catch (error) {
         console.log(error)
     }
 })
 
 app.get("/chat", (req, res)=>{
-    res.send()
+    res.send(chat)
 })
 
 app.listen(5000, async () => {
