@@ -85,7 +85,7 @@
         async function fetchChatData() {
             try {
                 let xhr = new XMLHttpRequest()
-                xhr.open("POST", "/")
+                xhr.open("GET", "/chat")
                 xhr.setRequestHeader("content-type", "application/json")
 
                 xhr.onreadystatechange = function () {
