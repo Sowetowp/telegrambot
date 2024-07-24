@@ -44,7 +44,7 @@ app.post("/", async (req, res) => {
             chat_id: CHAT_ID,
             text: req.body.message
         })
-        chat.push({message: req.body.})
+        chat.push({message: req.body.message})
         res.send(chat)
     } catch (error) {
         console.log(error)
