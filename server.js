@@ -28,7 +28,7 @@ app.post(`/webhook/${TOKEN}`, (req, res) => {
 
     const chatId = req.body.message.chat.id
     const tect = req.body.message.text
-    await axios.
+    await axios.post()
     res.send({});
 });
 
