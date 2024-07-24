@@ -13,9 +13,22 @@
     <main class="w-full bg-cyan-200">
         <section class="max-w-7xl lg:w-1/2 m-auto min-h-screen bg-white p-12">
             <img src="/195.jpg" alt="" class="w-32 m-">
-            
+
         </section>
     </main>
+    <script>
+        var i = 0;
+        var txt = 'Lorem ipsum dummy text blabla.';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
 </body>
 
 </html>
