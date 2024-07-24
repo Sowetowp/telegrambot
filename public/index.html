@@ -89,6 +89,7 @@
     <script>
         async function fetchChatData() {
             const dischat = document.getElementById("dischat")
+            dischat.innerHTML = ``
             try {
                 let response = await fetch("/chat", {
                     method: "GET",
