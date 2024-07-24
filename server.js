@@ -45,8 +45,8 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
 
 app.post("/", async (req, res) => {
     try {
-        chat = localStorage.getItem("chat")
-        localStorage.setItem("chat", chat.push({ received: req.body.message }))
+        // chat = localStorage.getItem("chat")
+        // localStorage.setItem("chat", chat.push({ received: req.body.message }))
         await axios.post(`${TELEGRAM_API}/sendMessage`, {
             chat_id: CHAT_ID,
             text: req.body.message
