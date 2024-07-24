@@ -106,12 +106,13 @@
         }
         fetchChatData()
         setInterval(fetchChatData, 1000);
-        const scroll = async()=>{
-            const dischat = document.getElementById("dischat")
-            console.log(dischat)
+        const scroll = async () => {
+            const dischat = document.getElementById("dischat");
+            console.log(dischat);
             dischat.scrollTop = dischat.scrollHeight;
-        }
-        scroll()
+        };
+
+        setTimeout(scroll, 0);
     </script>
     <script>
         const form = document.getElementById("form")
@@ -131,9 +132,9 @@
                     }
                 }
             };
-            
+
             xhr.send(JSON.stringify({ message: message.value }))
-            
+
             message.value = ""
         })
     </script>
