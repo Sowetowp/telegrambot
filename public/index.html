@@ -128,14 +128,7 @@
             };
             
             xhr.send(JSON.stringify({ message: message.value }))
-            const dischat = document.getElementById("dischat")
-            cr = document.createElement("div")
-            cr.innerHTML = `
-                <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
-                ${message.value}
-                </div>
-            `
-            dischat.appendChild(cr)
+            
             message.value = ""
         })
     </script>
