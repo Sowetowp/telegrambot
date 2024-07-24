@@ -70,7 +70,6 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
-                        // Handle the response here
                         const response = JSON.parse(xhr.responseText);
                         console.log(response);
                     } else {
