@@ -43,7 +43,7 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
 
 app.post("/", async (req, res) => {
     try {
-
+       console.log(req.body)
     } catch (error) {
 
     }
