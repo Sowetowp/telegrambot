@@ -12,7 +12,7 @@ const app = express()
 app.use(bodyParser.json())
 
 const init = async()=>{
-    const res = await axios.get(`${t}`)
+    const res = await axios.get(`${TELEGRAM_API}/`)
 }
 app.listen(5000, async()=>{
     console.log("app running")
