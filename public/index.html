@@ -106,7 +106,7 @@
                     dischat.innerHTML = ``
                     chatArrayParsed.forEach(element => {
                         const created = document.createElement("div")
-                        if(element.sent){
+                        if(element.received){
                             created.innerHTML = `
                             <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
                                 ${element.received}
