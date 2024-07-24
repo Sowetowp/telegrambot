@@ -35,7 +35,7 @@ const init = async () => {
 app.post(`/webhook/${TOKEN}`, async (req, res) => {
     console.log(req.body);
     const text = req.body.message.text
-   
+
     fs.readFile(FILE_PATH, 'utf8', (err, data) => {
         if (err && err.code !== 'ENOENT') {
             console.error('Error reading chat file:', err);
@@ -71,20 +71,20 @@ app.post("/", async (req, res) => {
                 console.error('Error reading chat file:', err);
                 return res.status(500).send('Server error');
             }
-    
+
             let chat = [];
             if (data) {
                 chat = JSON.parse(data);
             }
-    
+
             chat.push({ received: req.body.message });
-    
+
             fs.writeFile(FILE_PATH, JSON.stringify(chat, null, 2), (err) => {
                 if (err) {
                     console.error('Error writing chat file:', err);
                     return res.status(500).send('Server error');
                 }
-    
+
                 res.send({});
             });
         });
