@@ -600,6 +600,10 @@ video {
   min-height: 100vh;
 }
 
+.min-h-\[70\%\] {
+  min-height: 70%;
+}
+
 .w-32 {
   width: 8rem;
 }
