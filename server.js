@@ -47,6 +47,7 @@ app.post("/", async (req, res) => {
        res.send("success")
     } catch (error) {
         console.log(error)
+        res.
     }
 })
 
