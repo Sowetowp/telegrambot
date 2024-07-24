@@ -5,7 +5,7 @@
 
 .typewriter {
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     margin: 0 auto;
     letter-spacing: 0.15em;
     animation: typing 3.5s steps(40, end);
