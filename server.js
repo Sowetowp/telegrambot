@@ -18,7 +18,7 @@ const init = async()=>{
 
 app.post(URI, async(req, res)=>{
     console.log(req.body)
-    return res.send()
+    return res.send({})
 })
 app.listen(5000, async()=>{
     console.log("app running")
