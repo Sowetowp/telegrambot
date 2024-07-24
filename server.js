@@ -42,6 +42,31 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
     //     text: text
     // })
 
+    fs.readFile(FILE_PATH, 'utf8', (err, data) => {
+        if (err && err.code !== 'ENOENT') {
+            console.error('Error reading chat file:', err);
+            return res.status(500).send('Server error');
+        }
+
+        // Parse existing data or initialize an empty array
+        let chat = [];
+        if (data) {
+            chat = JSON.parse(data);
+        }
+
+        // Add new chat message
+        chat.push({ sent: text });
+
+        // Write updated chat data to file
+        fs.writeFile(FILE_PATH, JSON.stringify(chat, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing chat file:', err);
+                return res.status(500).send('Server error');
+            }
+
+            res.send({});
+        });
+    });
     res.send({});
 });
 
