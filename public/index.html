@@ -111,7 +111,7 @@
     <script>
         const form = document.getElementById("form")
         const message = document.getElementById("messageInput")
-        form.addEventListener("submit", async(e) => {
+        form.addEventListener("submit", (e) => {
             e.preventDefault()
             let xhr = new XMLHttpRequest()
             xhr.open("POST", "/")
@@ -121,7 +121,7 @@
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         const response = JSON.parse(xhr.responseText);
-                        await fetchChatData()
+                        fetchChatData()
                     } else {
                         console.error('Error sending message:', xhr.status, xhr.statusText);
                     }
