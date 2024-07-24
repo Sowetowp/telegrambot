@@ -608,6 +608,10 @@ video {
   max-width: 80rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .border {
   border-width: 1px;
 }
