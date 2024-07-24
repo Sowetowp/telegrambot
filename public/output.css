@@ -588,28 +588,11 @@ video {
   padding: 3rem;
 }
 
-/* Base styles for the typewriter effect */
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f3f4f6;
-  font-family: 'Courier New', Courier, monospace;
-}
-
 .typewriter {
   overflow: hidden;
-  /* Ensures the content is hidden as it is typed */
-  border-right: 0.15em solid #000;
-  /* The cursor */
   white-space: nowrap;
-  /* Prevents the text from wrapping */
   margin: 0 auto;
-  /* Centers the element */
   letter-spacing: 0.15em;
-  /* Space between characters */
   animation: typing 3.5s steps(40, end);
 }
 
@@ -617,8 +600,6 @@ body {
   display: inline-block;
   font-size: 2em;
 }
-
-/* The typing effect */
 
 @keyframes typing {
   from {
