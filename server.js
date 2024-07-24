@@ -16,6 +16,7 @@ const init = async()=>{
     console.log(res.data)
 }
 
+
 app.listen(5000, async()=>{
     console.log("app running")
     await init()
