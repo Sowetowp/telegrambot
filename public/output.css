@@ -566,6 +566,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .h-\[40vh\] {
   height: 40vh;
 }
