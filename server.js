@@ -13,5 +13,5 @@ app.use(bodyParser.json())
 
 app.listen(5000, async()=>{
     console.log("app running")
-    await app.init()
+    await init()
 })
