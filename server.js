@@ -77,7 +77,7 @@ app.post("/", async (req, res) => {
                 chat = JSON.parse(data);
             }
     
-            chat.push({ received: text });
+            chat.push({ received: req.body.message });
     
             fs.writeFile(FILE_PATH, JSON.stringify(chat, null, 2), (err) => {
                 if (err) {
