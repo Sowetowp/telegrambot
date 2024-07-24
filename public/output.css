@@ -622,7 +622,7 @@ video {
   padding: 3rem;
 }
 
-/* Base styles for the typewriter effect */
+/* Base styles */
 
 body {
   display: flex;
@@ -635,20 +635,29 @@ body {
   /* Remove default margin */
 }
 
-.typewriter {
-  display: inline-block;
-  /* Ensures it takes the width of its content */
+.container {
+  width: 80%;
+  /* Adjust as needed */
+  max-width: 600px;
+  /* Adjust as needed */
   overflow: hidden;
   /* Hide overflowed content */
+  position: relative;
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.typewriter {
+  display: inline;
   white-space: pre-wrap;
   /* Allow text to wrap */
+  overflow: hidden;
+  /* Hide overflowed content */
   border-right: 0.15em solid #000;
   /* The cursor */
-  letter-spacing: 0.15em;
-  /* Space between characters */
-  animation: typing 4s steps(40, end) 1s 1 normal both, blink-caret 0.75s step-end infinite;
-  max-width: 100%;
-  /* Ensures it doesn’t overflow its container */
+  animation: typing 4s steps(60, end) 1s 1 normal both, blink-caret 0.75s step-end infinite;
 }
 
 /* Typing animation */
