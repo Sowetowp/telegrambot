@@ -83,6 +83,7 @@
     </script>
     <script>
         async function fetchChatData() {
+            const dischat = document.getElementById("dischat")
             try {
                 let response = await fetch("/chat", {
                     method: "GET",
