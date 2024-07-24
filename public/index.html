@@ -99,7 +99,6 @@
 
                 if (response.ok) {
                     let data = await response.json();
-                    console.log(data)
                     localStorage.setItem("chat", JSON.stringify(data));
                     let existingChat = localStorage.getItem("chat");
                     let chatArrayParsed = JSON.parse(existingChat);
