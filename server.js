@@ -52,7 +52,9 @@ app.post("/", async (req, res) => {
     }
 })
 
-app.get("/")
+app.get("/chat", (req, res)=>{
+    res.send()
+})
 
 app.listen(5000, async () => {
     console.log('App running on port 5000');
