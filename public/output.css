@@ -622,6 +622,19 @@ video {
   padding: 3rem;
 }
 
+/* Base styles for the typewriter effect */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  /* Remove default margin */
+}
+
 .typewriter {
   display: inline-block;
   /* Ensures it takes the width of its content */
@@ -650,8 +663,21 @@ video {
   }
 }
 
+/* Blinking cursor animation */
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
   }
 }
+  

@@ -3,7 +3,18 @@
 @tailwind utilities;
 
 
-.typewriter {
+/* Base styles for the typewriter effect */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .typewriter {
     display: inline-block; /* Ensures it takes the width of its content */
     overflow: hidden; /* Hide overflowed content */
     white-space: pre-wrap; /* Allow text to wrap */
@@ -18,3 +29,10 @@
     from { width: 0; }
     to { width: 100%; }
   }
+  
+  /* Blinking cursor animation */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+  
