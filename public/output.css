@@ -631,3 +631,28 @@ video {
     width: 50%;
   }
 }
+.typewriter {
+  overflow: hidden; /* Ensures the content is hidden as it is typed */
+  border-right: 0.15em solid #000; /* The cursor */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  margin: 0 auto; /* Centers the element */
+  letter-spacing: 0.15em; /* Space between characters */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.typing {
+  display: inline-block;
+  font-size: 2em;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
