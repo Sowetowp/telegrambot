@@ -689,6 +689,11 @@ video {
   font-weight: 300;
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
