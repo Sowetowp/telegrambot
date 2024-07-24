@@ -44,6 +44,7 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
 app.post("/", async (req, res) => {
     try {
        console.log(req.body)
+       res.send("success")
     } catch (error) {
         console.log(error)
     }
