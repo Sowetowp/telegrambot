@@ -12,5 +12,5 @@ const app = express()
 app.use(bodyParser.json())
 
 app.listen(5000, async()=>{
-    console.log(first)
+    console.log("app running")
 })
