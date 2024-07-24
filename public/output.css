@@ -624,7 +624,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 255, 255, 0.105);
+  background-color: rgba(190, 243, 243, 0.105);
   padding: 0 15px;
   border-radius: 10px;
   border: 1px solid rgb(63, 63, 63);
