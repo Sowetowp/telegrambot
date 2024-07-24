@@ -41,6 +41,8 @@ app.post(`/webhook/${TOKEN}`, async(req, res) => {
     res.send({});
 });
 
+app.post("/", )
+
 app.listen(5000, async () => {
     console.log('App running on port 5000');
     await init();
