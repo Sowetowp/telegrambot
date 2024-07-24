@@ -3,6 +3,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 
+app.use(express.static("public"))
+app.use(express.json())
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html")
+})
+
 const { TOKEN, SERVER_URL } = process.env;
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
 const URI = `webhook/${TOKEN}`;
