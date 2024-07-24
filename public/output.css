@@ -667,6 +667,15 @@ video {
   padding: 3rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
 .align-baseline {
   vertical-align: baseline;
 }
