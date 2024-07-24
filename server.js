@@ -46,6 +46,7 @@ app.post("/", async (req, res) => {
     try {
         
         await axios.post(`${TELEGRAM_API}/sendMessage`, {
+            chat_id: 6445918984,
             text: req.body.message
         })
         res.send({});
