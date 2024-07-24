@@ -633,7 +633,6 @@ video {
 }
 .typewriter {
   overflow: hidden; /* Ensures the content is hidden as it is typed */
-  border-right: 0.15em solid #000; /* The cursor */
   white-space: nowrap; /* Prevents the text from wrapping */
   margin: 0 auto; /* Centers the element */
   letter-spacing: 0.15em; /* Space between characters */
