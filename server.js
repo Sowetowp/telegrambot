@@ -15,6 +15,7 @@ const init = async()=>{
     const res = await axios.get(`${TELEGRAM_API}/setWebhook?url=${WEBHOOK_URL}`)
     console.log(res.data)
 }
+
 app.listen(5000, async()=>{
     console.log("app running")
     await init()
