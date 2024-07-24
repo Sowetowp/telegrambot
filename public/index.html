@@ -70,6 +70,21 @@
             xhr.send(JSON.stringify({message: message.value}))
         })
     </script>
+    <script>
+        // Function to fetch and display chat data from the static file
+        async function fetchChatData() {
+            try {
+                const response = await fetch('/chat.json');
+                const chatData = await response.json();
+                console.log(chatData); // Display or process the chat data as needed
+            } catch (error) {
+                console.error('Error fetching chat data:', error);
+            }
+        }
+
+        // Fetch chat data when the page loads
+        window.onload = fetchChatData;
+    </script>
 </body>
 
 </html>
