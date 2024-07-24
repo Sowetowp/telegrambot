@@ -558,6 +558,10 @@ video {
   height: 3rem;
 }
 
+.max-w-7xl {
+  max-width: 80rem;
+}
+
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
