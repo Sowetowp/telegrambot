@@ -12,23 +12,26 @@
     padding: 0 15px;
     border-radius: 10px;
     border: 1px solid rgb(63, 63, 63);
-  }
-  .messageBox:focus-within {
+}
+
+.messageBox:focus-within {
     border: 1px solid rgb(110, 110, 110);
-  }
-  .fileUploadWrapper {
+}
+
+.fileUploadWrapper {
     width: fit-content;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  #file {
+}
+
+#file {
     display: none;
-  }
-  .fileUploadWrapper label {
+}
+
+.fileUploadWrapper label {
     cursor: pointer;
     width: fit-content;
     height: fit-content;
@@ -36,28 +39,35 @@
     align-items: center;
     justify-content: center;
     position: relative;
-  }
-  .fileUploadWrapper label svg {
+}
+
+.fileUploadWrapper label svg {
     height: 18px;
-  }
-  .fileUploadWrapper label svg path {
+}
+
+.fileUploadWrapper label svg path {
     transition: all 0.3s;
-  }
-  .fileUploadWrapper label svg circle {
+}
+
+.fileUploadWrapper label svg circle {
     transition: all 0.3s;
-  }
-  .fileUploadWrapper label:hover svg path {
+}
+
+.fileUploadWrapper label:hover svg path {
     stroke: #fff;
-  }
-  .fileUploadWrapper label:hover svg circle {
+}
+
+.fileUploadWrapper label:hover svg circle {
     stroke: #fff;
     fill: #3c3c3c;
-  }
-  .fileUploadWrapper label:hover .tooltip {
+}
+
+.fileUploadWrapper label:hover .tooltip {
     display: block;
     opacity: 1;
-  }
-  .tooltip {
+}
+
+.tooltip {
     position: absolute;
     top: -40px;
     display: none;
@@ -71,8 +81,9 @@
     border-radius: 5px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
     transition: all 0.3s;
-  }
-  #messageInput {
+}
+
+#messageInput {
     width: 200px;
     height: 100%;
     background-color: transparent;
@@ -80,14 +91,15 @@
     border: none;
     padding-left: 10px;
     color: white;
-  }
-  #messageInput:focus ~ #sendButton svg path,
-  #messageInput:valid ~ #sendButton svg path {
+}
+
+#messageInput:focus~#sendButton svg path,
+#messageInput:valid~#sendButton svg path {
     fill: #3c3c3c;
     stroke: white;
-  }
-  
-  #sendButton {
+}
+
+#sendButton {
     width: fit-content;
     height: 100%;
     background-color: transparent;
@@ -98,16 +110,18 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s;
-  }
-  #sendButton svg {
+}
+
+#sendButton svg {
     height: 18px;
     transition: all 0.3s;
-  }
-  #sendButton svg path {
+}
+
+#sendButton svg path {
     transition: all 0.3s;
-  }
-  #sendButton:hover svg path {
+}
+
+#sendButton:hover svg path {
     fill: #3c3c3c;
     stroke: white;
-  }
-  
+}

@@ -738,8 +738,8 @@ video {
   color: white;
 }
 
-#messageInput:focus ~ #sendButton svg path,
-  #messageInput:valid ~ #sendButton svg path {
+#messageInput:focus~#sendButton svg path,
+#messageInput:valid~#sendButton svg path {
   fill: #3c3c3c;
   stroke: white;
 }
@@ -784,4 +784,3 @@ video {
     width: 50%;
   }
 }
-  
