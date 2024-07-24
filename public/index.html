@@ -67,18 +67,8 @@
             xhr.open("POST", "/")
             xhr.setRequestHeader("content-type", "application/json")
 
-            xhr.send(JSON.stringify({ message: message.value }))
+            xhr.send(JSON.stringify({message: message.value}))
         })
-    </script>
-    <script>
-        app.post(`/webhook/${TOKEN}`, async (req, res) => {
-            console.log(req.body);
-
-            const chatId = req.body.message.chat.id
-            const text = req.body.message.text
-            
-            res.send({});
-        });
     </script>
 </body>
 
