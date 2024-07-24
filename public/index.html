@@ -96,6 +96,7 @@
                                     `
                         }
                         dischat.appendChild(created)
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
                     });
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
