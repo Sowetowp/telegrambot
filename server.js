@@ -28,7 +28,9 @@ app.post(`/webhook/${TOKEN}`, (req, res) => {
 
     const chatId = req.body.message.chat.id
     const tect = req.body.message.text
-    await axios.post(`${TELEGRAM_API}/send`)
+    await axios.post(`${TELEGRAM_API}/sendMessage`, {
+        
+    })
     res.send({});
 });
 
