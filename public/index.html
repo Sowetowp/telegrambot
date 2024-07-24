@@ -89,7 +89,6 @@
     <script>
         async function fetchChatData() {
             const dischat = document.getElementById("dischat")
-            dischat.innerHTML = ``
             try {
                 let response = await fetch("/chat", {
                     method: "GET",
@@ -97,7 +96,7 @@
                         "Content-Type": "application/json"
                     }
                 });
-
+                
                 if (response.ok) {
                     let data = await response.json();
                     localStorage.setItem("chat", JSON.stringify(data));
@@ -110,15 +109,16 @@
                             created.innerHTML = `
                             <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
                                 ${element.sent}
-                            </div>
-                            `
-                        }else{
-                            created.innerHTML = `
-                            <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
-                                ${element.received}
-                            </div>
-                            `
-                        }
+                                </div>
+                                `
+                            }else{
+                                created.innerHTML = `
+                                <div class="bg-cyan-100 max-w-[90%] ml-auto w-fit px-3 py-2 rounded-lg">
+                                    ${element.received}
+                                    </div>
+                                    `
+                                }
+                                dischat.innerHTML = ``
                         dischat.appendChild(created)
                     });
                     // dischat.innerHTML = ``
