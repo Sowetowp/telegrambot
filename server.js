@@ -36,6 +36,7 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
     console.log(req.body);
     const text = req.body.message.text
     chat.push({sent: text})
+    res.send({})
 });
 
 app.post("/", async (req, res) => {
