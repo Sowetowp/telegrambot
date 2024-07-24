@@ -1,27 +1,34 @@
-require("dotenv").config()
-const express = require("express")
-const bodyParser = require("body-parser")
-const axios = require("axios")
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
 
-const {TOKEN, SERVER_URL} = process.env
-const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
-const URI = `webhook/${TOKEN}`
-const WEBHOOK_URL = `${SERVER_URL}/${URI}`
+const { TOKEN, SERVER_URL } = process.env;
+const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
+const URI = `webhook/${TOKEN}`;
+const WEBHOOK_URL = `${SERVER_URL}/${URI}`;
 
-const app = express()
-app.use(bodyParser.json())
+const app = express();
+app.use(bodyParser.json());
 
-const init = async()=>{
-    const res = await axios.get(`${TELEGRAM_API}/setWebhook?url=${WEBHOOK_URL}`)
-    console.log(res.data)
-}
+const init = async () => {
+    try {
+        const res = await axios.get(`${TELEGRAM_API}/setWebhook?url=${WEBHOOK_URL}`);
+        console.log(res.data);
+    } catch (error) {
+        console.error('Error setting webhook:', error.message);
+        if (error.response) {
+            console.error('Error response data:', error.response.data);
+        }
+    }
+};
 
-app.post(URI, async(req, res)=>{
-    console.log(req.body)
-    return res.send({})
-})
+app.post(`/webhook/${TOKEN}`, (req, res) => {
+    console.log(req.body);
+    res.send({});
+});
 
-app.listen(5000, async()=>{
-    console.log("app running")
-    await init()
-})
+app.listen(5000, async () => {
+    console.log('App running on port 5000');
+    await init();
+});
