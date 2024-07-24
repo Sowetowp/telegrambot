@@ -708,7 +708,6 @@ video {
   outline: none;
   border: none;
   padding-left: 10px;
-  color: white;
 }
 
 #messageInput:focus~#sendButton svg path,
