@@ -104,9 +104,11 @@
                     let chatArrayParsed = JSON.parse(existingChat);
                     console.log(chatArrayParsed);
                     chatArrayParsed.forEach(element => {
-                        document.createElement("div")
+                        const created = document.createElement("div")
                         if(element.sent){
-
+                            created.innerHTML = `
+                            
+                            `
                         }
                     });
                     // dischat.innerHTML = ``
