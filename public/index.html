@@ -94,7 +94,7 @@
                 if (response.ok) {
                     let data = await response.json();
                     localStorage.setItem("chat", []);
-                    console.log(updatedChat);
+                    console.log(data);
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
                 }
