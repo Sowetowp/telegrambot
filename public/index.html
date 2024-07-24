@@ -75,13 +75,12 @@
             try {
                 const response = await fetch('/chat.json');
                 const chatData = await response.json();
-                console.log(chatData); // Display or process the chat data as needed
+                console.log(chatData);
             } catch (error) {
                 console.error('Error fetching chat data:', error);
             }
         }
 
-        // Fetch chat data when the page loads
         window.onload = fetchChatData;
     </script>
 </body>
