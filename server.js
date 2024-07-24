@@ -9,6 +9,12 @@ const URI = `webhook/${TOKEN}`;
 const WEBHOOK_URL = `${SERVER_URL}/${URI}`;
 
 const app = express();
+app.use(express.static("public"))
+app.use(express.json())
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html")
+})
 app.use(bodyParser.json());
 
 const init = async () => {
