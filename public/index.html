@@ -76,6 +76,7 @@
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         const response = JSON.parse(xhr.responseText);
+                        console.log(response);
                     } else {
                         console.error('Error sending message:', xhr.status, xhr.statusText);
                     }
