@@ -699,6 +699,13 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 768px) {
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
