@@ -29,7 +29,7 @@ const init = async () => {
     }
 };
 
-app.post(`/webhook/${TOKEN}`, async(req, res) => {
+app.post(`/webhook/${TOKEN}`, async (req, res) => {
     console.log(req.body);
 
     const chatId = req.body.message.chat.id
@@ -41,7 +41,13 @@ app.post(`/webhook/${TOKEN}`, async(req, res) => {
     res.send({});
 });
 
-app.post("/", )
+app.post("/", async (req, res) => {
+    try {
+
+    } catch (error) {
+
+    }
+})
 
 app.listen(5000, async () => {
     console.log('App running on port 5000');
