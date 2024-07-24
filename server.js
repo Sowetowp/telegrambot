@@ -66,7 +66,28 @@ app.post("/", async (req, res) => {
             chat_id: CHAT_ID,
             text: req.body.message
         })
-        res.send({});
+        fs.readFile(FILE_PATH, 'utf8', (err, data) => {
+            if (err && err.code !== 'ENOENT') {
+                console.error('Error reading chat file:', err);
+                return res.status(500).send('Server error');
+            }
+    
+            let chat = [];
+            if (data) {
+                chat = JSON.parse(data);
+            }
+    
+            chat.push({ sent: text });
+    
+            fs.writeFile(FILE_PATH, JSON.stringify(chat, null, 2), (err) => {
+                if (err) {
+                    console.error('Error writing chat file:', err);
+                    return res.status(500).send('Server error');
+                }
+    
+                res.send({});
+            });
+        });
     } catch (error) {
         console.log(error)
     }
