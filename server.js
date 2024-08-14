@@ -31,7 +31,7 @@ const init = async () => {
         }
     }
 };
-const chat = []
+let chat = []
 app.post(`/webhook/${TOKEN}`, async (req, res) => {
     console.log(req.body);
     const text = req.body.message.text
